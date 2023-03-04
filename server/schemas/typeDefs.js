@@ -9,6 +9,17 @@ const typeDefs = gql`
     skills: [String]!
   }
 
+  type Comic {
+    _id: ID
+    name: String
+   title: String
+   image: String
+   price: Int
+   description: String
+   userName: String
+   createdAt: Date
+  }
+
   type Auth {
     token: ID!
     profile: Profile
