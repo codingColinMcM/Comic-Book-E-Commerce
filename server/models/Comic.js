@@ -54,6 +54,6 @@ function setPrice(num){
     return num*100;
 }
 
-const Comic = model('comic', comicSchema);
+const Comic = model('Comic', comicSchema);
 
 module.exports = Comic;
