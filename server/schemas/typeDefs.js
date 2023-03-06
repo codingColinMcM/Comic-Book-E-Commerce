@@ -6,7 +6,17 @@ const typeDefs = gql`
     name: String
     email: String
     password: String
-    skills: [String]!
+    savedComics: [String]
+  }
+
+  type Comic {
+    title: String!
+    image: String
+    price: int
+    description: String!
+    image: String
+    userName: String
+    createdAt: Date
   }
 
   type Auth {
@@ -19,13 +29,18 @@ const typeDefs = gql`
     profile(profileId: ID!): Profile
   }
 
+  input ComicBookInput {
+    authors: [String]
+    description: String!
+    image: String
+    title: String!
+  }
+
   type Mutation {
     addProfile(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-
-    addSkill(profileId: ID!, skill: String!): Profile
-    removeProfile(profileId: ID!): Profile
-    removeSkill(profileId: ID!, skill: String!): Profile
+    addComic(comic: ComicBookInput): User
+    deleteComic(title: String!): User
   }
 `;
 
