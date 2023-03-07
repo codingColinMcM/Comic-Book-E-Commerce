@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.nav {
+    background-color: #F3F2E9;
+    color: #9d03a5;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.nav ul {
+    padding: -;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav a {
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .25rem;
+}
+
+.nav li.active {
+    color: #03a531;
+}
+
+.nav li.hover {
+    color: #c6fb4a;
+}
