@@ -10,6 +10,27 @@ const comicSchema = new Schema({
         maxLength: 50
     },
 
+    author: {
+        type: String,
+        required: true,
+        minLength: 1,
+        maxLength: 50
+    },
+
+    artist: {
+        type: String,
+        required: true,
+        minLength: 1,
+        maxLength: 50
+    },
+
+    writer: {
+        type: String,
+        required: true,
+        minLength: 1,
+        maxLength: 50
+    },
+
     image: {
         type: String,
         required: true
