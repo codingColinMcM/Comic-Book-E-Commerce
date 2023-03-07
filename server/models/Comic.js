@@ -14,6 +14,27 @@ const comicSchema = new Schema({
         required: true
     },
 
+    author: {
+        type: String,
+        required: true,
+        minLength: 1,
+        maxLength: 50
+    },
+
+    artist: {
+        type: String,
+        required: true,
+        minLength: 1,
+        maxLength: 50
+    },
+
+    writer: {
+        type: String,
+        required: true,
+        minLength: 1,
+        maxLength: 50
+    },
+
     image: {
         type: String,
         required: true
@@ -58,6 +79,6 @@ function setPrice(num){
     return num*100;
 }
 
-const Comic = model('comic', comicSchema);
+const Comic = model('Comic', comicSchema);
 
 module.exports = Comic;
