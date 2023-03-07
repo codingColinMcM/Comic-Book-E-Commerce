@@ -9,6 +9,10 @@ const comicSchema = new Schema({
         minLength: 1,
         maxLength: 50
     },
+    publisher: {
+        type: String,
+        required: true
+    },
 
     image: {
         type: String,

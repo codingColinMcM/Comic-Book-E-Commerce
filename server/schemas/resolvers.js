@@ -37,11 +37,11 @@ const resolvers = {
       return { token, profile };
     },
 
-    addSkill: async (parent, { profileId, skill }) => {
-      return Profile.findOneAndUpdate(
-        { _id: profileId },
+    addComic: async (parent, { userId, comic }) => {
+      return User.findOneAndUpdate(
+        { _id: userId },
         {
-          $addToSet: { skills: skill },
+          $addToSet: { savedComics: comic },
         },
         {
           new: true,
@@ -49,13 +49,11 @@ const resolvers = {
         }
       );
     },
-    removeProfile: async (parent, { profileId }) => {
-      return Profile.findOneAndDelete({ _id: profileId });
-    },
-    removeSkill: async (parent, { profileId, skill }) => {
-      return Profile.findOneAndUpdate(
-        { _id: profileId },
-        { $pull: { skills: skill } },
+    
+    deleteComic: async (parent, { userId, comic }) => {
+      return User.findOneAndUpdate(
+        { _id: userId },
+        { $pull: { savedComics: comic } },
         { new: true }
       );
     },

@@ -1,6 +1,8 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
+const Comic = require('./Comic');
+
 const profileSchema = new Schema({
   name: {
     type: String,
@@ -19,12 +21,10 @@ const profileSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  skills: [
-    {
-      type: String,
-      trim: true,
-    },
-  ],
+
+  savedComics: [Comic],
+  
+  
 });
 
 // set up pre-save middleware to create password
