@@ -11,12 +11,9 @@ const typeDefs = gql`
 
   type Comic {
     title: String!
+    publisher: String
     image: String
     price: int
-    description: String!
-    image: String
-    userName: String
-    createdAt: Date
   }
 
   type Auth {
@@ -30,7 +27,7 @@ const typeDefs = gql`
   }
 
   input ComicBookInput {
-    authors: [String]
+    publisher: [String]
     description: String!
     image: String
     title: String!
