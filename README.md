@@ -2,42 +2,48 @@
 
 <img src=".placeholder.jpg" alt="Picture of Comic Book E-commerce App" width="100%">
 
+
 ## Description
 
-Here is a description.
+Welcome to Comic Book Exchange. This is a collaborative MERN-Stack application that lets verified users create posts to sell comic books that others can place a bid on in order to purchase it. We wanted to make a website that was specifically tailored for comic books since there are thousands of books and it can be difficult to find a great deal. Throughout this project we developed our front-end abilities for React and strengthen our experience in data and user demand.
 
-Demo: placeholder
 
 ## Table of Contents
-
-- [Getting Started](#getting-started)
-- [Technology](#technology)
-- [Authors](#authors)
+- [Technologies Used](#technologiesused)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
 - [License](#license)
 
-## Getting Started
-<a href=https://murmuring-ocean-73396.herokuapp.com>Working Title Comic Book E-Commerce</a>
-<br></br>
-<a href="https://github.com/marysgreenwood/Spaghetti-on-the-Wall-Project">Working Title Comic Book E-commerce GitHub Repository</a>
-<br></br>
-To get started click the the link "Magpie Gallery" located in this section directly above this text. Once you have been redirect to Magpie Gallery you will be faced with an intuitive user experice. Explore the many options available to on the main page. After exploring, feel free to return here to follow the link to our GitHub repository to examine our process & code in more detail.
 
-## Technology
+## Technologies Used
 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+HTML <br>
+CSS <br>
+Javascript <br>
+React <br>
+Graphql <br>
+Mongoose ODM <br>
+MongoDB <br>
+JWT <br>
+Multer <br>
 
-(insert badges)
 
-We utilized the following node modules:
-<br>
+## Installation
 
-- list of node modules
-- list of node modules
-- list of 
+What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
 
-<br></br>
 
-## Authors
+## Usage
+
+Provide instructions and examples for use. Include screenshots as needed.
+
+To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
+
+![alt text](assets/images/screenshot.png)
+
+
+## Credits
 
 ### Biggs, Alex
 
@@ -106,7 +112,7 @@ Short blurb of what this person contributed to the project.
 <pre>
 The MIT License
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+© Alex Biggs, Michael Lacalamito, Zain Khawaja, Colin McMurtray, Alegro Godley, Kevin White, University at North Carolina Chapel Hill Coding Bootcamp MIT License Copyright (c) 2023 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
