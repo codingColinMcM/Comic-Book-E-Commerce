@@ -17,6 +17,9 @@ module.exports = {
             const newComic = {};
             newComic.title = req.body.title;
             newComic.image = req.file.path.split("\\").slice(1).join("\\");
+            newComic.author = req.body.author;
+            newComic.artist = req.body.artist;
+            newComic.writer = req.body.writer;
             newComic.price = req.body.price;
             newComic.description = req.body.description;
             // REMEMBER TO REPLACE WITH req.session (or whatever jwt has)
