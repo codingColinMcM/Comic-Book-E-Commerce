@@ -12,7 +12,7 @@ module.exports = {
             },
             );
     }
-},
+};
 
     // get one Message by id
     getSingleMessage({ params }, res) {
