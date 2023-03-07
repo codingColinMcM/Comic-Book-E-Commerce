@@ -11,7 +11,9 @@ module.exports = {
                 res.status(400).json(err);
             },
             );
-    },
+    }
+},
+
     // get one Message by id
     getSingleMessage({ params }, res) {
         Message.findOne({ _id: params.id })
@@ -29,7 +31,7 @@ module.exports = {
                 console.log(err);
                 res.status(400).json(err);
             })
-    },
+    };
 
 
     // createMessage

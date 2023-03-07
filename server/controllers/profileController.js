@@ -1,64 +1,64 @@
-const User = require('../models/user');
-const userController = {
-    // get all users
-    getAllUser(req, res) {
-        User.find({})
+const Profile = require('../models/user');
+const profileController = {
+    // get all profiles
+    getAllProfile(req, res) {
+        Profile.find({})
             .populate({
                 path: 'Messages',
                 select: '-__v'
             })
             .select('-__v')
             .sort({ _id: -1 })
-            .then(dbUserData => res.json(dbUserData))
+            .then(dbProfileData => res.json(dbProfileData))
             .catch(err => {
                 console.log(err);
                 res.status(400).json(err);
             });
     },
-    // get one user by id
-    getSingleUser({ params }, res) {
-        User.findOne({ _id: params.id })
+    // get one profile by id
+    getSingleProfile({ params }, res) {
+        Profile.findOne({ _id: params.id })
             .populate({ path: 'Messages', select: '-__v' })
             .select('-__v')
-            .then(dbUserData => {
+            .then(dbProfileData => {
                 // If no user is found, send 404
-                if (!dbUserData) {
+                if (!dbProfileData) {
                     res.status(404).json({ message: 'No user found with this id!' });
                     return;
                 }
-                res.json(dbUserData);
+                res.json(dbProfileData);
             })
     },
-    // createUser
-    createUser({ body }, res) {
-        User.create(body)
-            .then(dbUserData => res.json(dbUserData))
+    // create Profile
+    createProfile({ body }, res) {
+        Profile.create(body)
+            .then(dbProfileData => res.json(dbProfileData))
             .catch(err => res.status(400).json(err));
     },
 
-    // update user by id
-    updateUser({ params, body }, res) {
-        User.findOneAndUpdate(
+    // update Profile by id
+    updateProfile({ params, body }, res) {
+        Profile.findOneAndUpdate(
             { _id: params.id },
             { $set: body },
             { runValidators: true, new: true }
         )
-            .then(dbUserData => {
-                if (!dbUserData) {
+            .then(dbProfileData => {
+                if (!dbProfileData) {
                     res.status(404).json({ message: 'No user found with this id!' });
                     return;
                 }
-                res.json(dbUserData);
+                res.json(dbProfileData);
             }
             )
     },
-    // delete user
-    deleteUser({ params }, res) {
-        User.findOneAndDelete(
+    // delete Profile
+    deleteProfile({ params }, res) {
+        Profile.findOneAndDelete(
             { _id: params.id },
         )
-            .then(dbUserData => {
-                if (!dbUserData) {
+            .then(dbProfileData => {
+                if (!dbProfileData) {
                     res.status(404).json({ message: 'No user found with this id!' });
                     //return;
                 }else{
@@ -68,34 +68,34 @@ const userController = {
     },
     //add friend
     addFriend(req, res) {
-        User.findOneAndUpdate(
-            { _id: req.params.userId },
+        Profile.findOneAndUpdate(
+            { _id: req.params.profileId },
             { $addToSet: { friends: req.params.friendId } },
             { runValidators: true, new: true }
         )
-            .then(dbUserData => {
-                if (!dbUserData) {
+            .then(dbProfileData => {
+                if (!dbProfileData) {
                     res.status(500).json({ message: 'No user found with this id!' });
                     return;
                 }
-                res.json(dbUserData);
+                res.json(dbProfileData);
             })
 
     },
 
     //remove friend
     removeFriend(req, res) {
-        User.findOneAndUpdate(
-            { _id: req.params.userId },
+        Profile.findOneAndUpdate(
+            { _id: req.params.profileId },
             { $pull: { friends: req.params.friendId } },
             { runValidators: true, new: true }
         )
-            .then(dbUserData => {
-                if (!dbUserData) {
+            .then(dbProfileData => {
+                if (!dbProfileData) {
                     res.status(500).json({ message: 'No user found with this id!' });
                     return;
                 }
-                res.json(dbUserData);
+                res.json(dbProfileData);
             })
             .catch(err => res.json(err));
     },
@@ -104,4 +104,4 @@ const userController = {
 
 
 
-module.exports = userController;
+module.exports = profileController;
