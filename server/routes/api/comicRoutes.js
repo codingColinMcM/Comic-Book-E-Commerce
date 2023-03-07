@@ -10,5 +10,5 @@ router.route('/all')
     .get(getAllComics);
 
 router.route("/upload")
-    .post(upload.single("file"), addComic)
+    .post(upload.single("image"), addComic)
 module.exports = router;

@@ -1,4 +1,5 @@
 const multer = require("multer");
+const path = require("path");
 
 const imageFilter = (req, file, cb) => {
   if (file.mimetype.startsWith("image")) {
@@ -10,7 +11,7 @@ const imageFilter = (req, file, cb) => {
 
 var storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null,  "./public/comics/");
+    cb(null,  "server/public/comics/");
   },
   filename: (req, file, cb) => {
     cb(null, `${Date.now()}-comicbook-E-Commerce-${file.originalname}`);
