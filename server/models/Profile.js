@@ -24,7 +24,8 @@ const profileSchema = new Schema({
       type: String,
       trim: true,
     },
-  ],
+  ],messages: [{ type: mongoose.Schema.Types.ObjectId, ref: "messages"}],
+  friends: [{ type: mongoose.Schema.Types.ObjectId, ref: "profile"}],
 });
 
 // set up pre-save middleware to create password
