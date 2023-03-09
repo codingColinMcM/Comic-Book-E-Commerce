@@ -6,6 +6,7 @@ import Navbarr from './components/Navbar';
 import Header from './components/Header';
 import Home from './components/pages/Home';
 // import Comic from './components/pages/Comic';
+import Browse from './components/pages/Browse'
 import Dashboard from './components/pages/Dashboard';
 import About from './components/pages/About';
 import Cardgen from './components/pages/Cardgen'
@@ -45,6 +46,9 @@ function App() {
             break
     case "/cardspec":
             Component = Cardspec
+            break
+    case "/browse":
+            Component = Browse
             break
   }
       return (
