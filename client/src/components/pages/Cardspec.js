@@ -1,18 +1,25 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 
-export default function Cardspec() {
+function Cardspec() {
   return (
-    <div>
-      <div class="card">
-        <h2>({title})</h2>
-        <h3>({issue}), ({volume})</h3>
-        <img src="({cover})})" alt="Comic Cover" style="width:100%"/>
-        <div class="container">
-        <h3>Author: ({author})</h3>
-        <h3>Artist: ({artist})</h3>
-        <h3>Price: ({price})</h3>
-        </div>
-      </div>
-    </div>
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="img placeholder" />
+      <Card.Body>
+        <Card.Title>Title</Card.Title>
+      </Card.Body>
+      <ListGroup className="list-group-flush">
+        <ListGroup.Item>Issue, Vol</ListGroup.Item>
+        <ListGroup.Item>Author</ListGroup.Item>
+        <ListGroup.Item>Publisher</ListGroup.Item>
+      </ListGroup>
+      <Card.Body>
+        <Button variant="primary">Buy</Button>
+      </Card.Body>
+    </Card>
   );
 }
+
+export default Cardspec;

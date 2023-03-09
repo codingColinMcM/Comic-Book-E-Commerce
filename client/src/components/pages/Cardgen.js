@@ -1,15 +1,18 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 export default function Cardgen() {
   return (
-    <div>
-      <div class="card">
-        <img src="({cover})})" alt="Comic Cover" style="width:100%"/>
-        <div class="container">
-          <h3>({title}), ({issue}), ({volume})</h3>
-          <h3>({price})</h3>
-        </div>
-      </div>
-    </div>
+    <Card style={{ width: '20rem' }}>
+      <Card.Img variant="top" src="cover placeholder/200px350" />
+      <Card.Body>
+        <Card.Title>Comic Title</Card.Title>
+        <Card.Text>
+          Issue Number, Vol Number
+        </Card.Text>
+        <Button variant="primary">Buy</Button>
+      </Card.Body>
+    </Card>
   );
 }
