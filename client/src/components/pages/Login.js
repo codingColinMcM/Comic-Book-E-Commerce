@@ -19,9 +19,9 @@ export default function Login() {
             </label>
           </div>
     
-          <div class="container" style="background-color:#f1f1f1">
+          {/* <div class="container" style="background-color:#f1f1f1">
             <span class="psw">Forgot <a href="#">password?</a></span>
-          </div>
+          </div> */}
       </div>
     </div>
   );
