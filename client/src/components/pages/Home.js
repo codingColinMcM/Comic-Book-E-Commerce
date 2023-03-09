@@ -3,7 +3,7 @@ import Cardgen from './Cardgen'
 
 export default function Home() {
   return (
-    <div>
+    <div className='container'>
       <h2>Randomly Selected Comics</h2>
       <Cardgen />
       <Cardgen />
