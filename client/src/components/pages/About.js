@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.gif';
+import logo from './logo2.gif';
 
 export default function About() {
   return (

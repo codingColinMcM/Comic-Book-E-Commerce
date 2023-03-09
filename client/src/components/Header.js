@@ -1,7 +1,7 @@
 import React from 'react';
 // import Image from 'react-bootstrap/Image'
 import '../styles/Header.css';
-import logo from './logo.gif';
+import logo from './logo2.gif';
 
 function Header() {
   return (
