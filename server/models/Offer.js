@@ -2,12 +2,18 @@ const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const offerSchema = new Schema({
+    textbody: {
     type: String,
     required: true,
     unique: true,
     trim: true,
+    },
+    userName: {
+        type: Types.ObjectId, 
+        ref: 'Profile', 
+    },
 })
 
-const offer = model('Offer', offerSchema);
+const Offer = model('Offer', offerSchema);
 
 module.exports = Offer;
