@@ -1,8 +1,3 @@
-* {
-    box-sizing: border-box;
-    background-color: #F3F2E9;
-}
-
 body {
     margin: 0;
 }
@@ -17,10 +12,10 @@ header {
     padding: 0 1rem;
 }
 
-.nav ul {
+/* .nav ul {
     padding: -;
     margin: 0;
     list-style: none;
     display: flex;
     gap: 1rem;
-}
+} */

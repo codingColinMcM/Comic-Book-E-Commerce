@@ -52,7 +52,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
   
 function Navbarr() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar variant= "dark" expand="lg">
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
