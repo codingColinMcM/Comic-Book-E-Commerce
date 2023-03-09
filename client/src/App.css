@@ -2,6 +2,11 @@ body {
     margin: 0;
 }
 
+.space {
+    margin: 5px;
+    padding: 5px;
+}
+
 .navbar {
     background-color: #9d03a5;
     color: white; 

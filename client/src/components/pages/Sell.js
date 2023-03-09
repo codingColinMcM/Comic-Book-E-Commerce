@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form';
 
 export default function Sell() {
   return (
+    <div className="container">
     <Form>
       <Form.Group className="mb-3" controlId="sellTitle">
         <Form.Label>Comic Title</Form.Label>
@@ -32,9 +33,10 @@ export default function Sell() {
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="I agree to all terms and conditions." />
       </Form.Group>
-      <Button variant="primary" type="submit">
+      <Button variant="secondary" type="submit">
         Submit
       </Button>
     </Form>
+    </div>
   );
 }

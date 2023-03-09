@@ -16,7 +16,7 @@ function Cardspec() {
         <ListGroup.Item>Publisher</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-        <Button variant="primary">Buy</Button>
+        <Button variant="secondary">Buy</Button>
       </Card.Body>
     </Card>
   );

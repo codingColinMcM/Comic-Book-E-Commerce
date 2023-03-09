@@ -11,7 +11,7 @@ export default function Cardgen() {
         <Card.Text>
           Issue Number, Vol Number
         </Card.Text>
-        <Button variant="primary">Buy</Button>
+        <Button variant="secondary">Buy</Button>
       </Card.Body>
     </Card>
   );

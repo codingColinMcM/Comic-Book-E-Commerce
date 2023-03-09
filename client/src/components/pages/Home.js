@@ -5,12 +5,21 @@ export default function Home() {
   return (
     <div className='container'>
       <h2>Randomly Selected Comics</h2>
-      <Cardgen />
-      <Cardgen />
-      <Cardgen />
-      <Cardgen />
-      <Cardgen />
-      <Cardgen />
+      <div className="space">
+        <Cardgen />
+      </div>
+      <div className="space">
+        <Cardgen />
+      </div>
+      <div className="space">
+        <Cardgen />
+      </div>
+      <div className="space">
+        <Cardgen />
+      </div>
+      <div className="space">
+        <Cardgen />
+      </div>
     </div>
   );
 }
