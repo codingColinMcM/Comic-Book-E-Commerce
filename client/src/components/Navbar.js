@@ -58,7 +58,13 @@ function Navbarr() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/dashboard">Dashboard</Nav.Link>
+            <NavDropdown title="Dashboard" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/dashboard">Profile</NavDropdown.Item>
+              <NavDropdown.Item href="/signup">
+                Sign Up
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/login">Login</NavDropdown.Item>
+            </NavDropdown>
             <NavDropdown title="Comics" id="basic-nav-dropdown">
               <NavDropdown.Item href="/browse">Browse</NavDropdown.Item>
               <NavDropdown.Item href="/new">
