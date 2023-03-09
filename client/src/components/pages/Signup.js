@@ -1,13 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import '../../App.css'
+// import '../../App.css'
 
 export default function SignUpPage() {
 
     return (
         <div className="text-center m-5-auto">
-            <h2>Welcome</h2>
+            <h2>Sign Up</h2>
+            <h3>Start Your Hero Journey Today</h3>
             <form>
                 <p>
                     <label>Email address</label><br/>
@@ -21,9 +22,9 @@ export default function SignUpPage() {
                     <button id="sub_btn" type="submit">Sign Up</button>
                 </p>
             </form>
-            <footer>
+            {/* <footer>
                 <p><Link to="/">Back to Homepage</Link>.</p>
-            </footer>
+            </footer> */}
         </div>
     )
 
