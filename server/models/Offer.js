@@ -3,11 +3,11 @@ const bcrypt = require('bcrypt');
 
 const offerSchema = new Schema({
     textbody: {
-    type: String,
-    required: true,
-    unique: true,
-    trim: true,
-    },
+        type: String,
+        required: true,
+        unique: true,
+        trim: true,
+        },
     userName: {
         type: Types.ObjectId, 
         ref: 'Profile', 
