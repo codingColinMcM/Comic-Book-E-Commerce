@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+ObjectId = Schema.ObjectId;
 const bcrypt = require('bcrypt');
 
 const offerSchema = new Schema({
@@ -9,7 +10,7 @@ const offerSchema = new Schema({
         trim: true,
         },
     userName: {
-        type: Types.ObjectId, 
+        type: { Types: ObjectId },
         ref: 'Profile', 
     },
 })

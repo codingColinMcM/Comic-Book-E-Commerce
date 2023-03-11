@@ -13,7 +13,7 @@ const typeDefs = gql`
     title: String!
     publisher: String
     image: String
-    price: int
+    price: Int
   }
 
   type Comic {
