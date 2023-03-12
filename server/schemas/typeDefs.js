@@ -6,25 +6,28 @@ const typeDefs = gql`
     name: String
     email: String
     password: String
-    savedComics: [String]
+    savedComics: [Comic]
   }
 
-  type Comic {
+  type Offer {
     title: String!
-    publisher: String
-    image: String
+    description: String!
     price: Int
+    userName: String
   }
 
   type Comic {
     _id: ID
     name: String
    title: String
+    publisher: String
+    writer: String
+    artist: String
    image: String
-   price: Int
+   price: Float
    description: String
    userName: String
-   createdAt: Date
+   createdAt: Int
   }
 
   type Auth {
@@ -42,13 +45,24 @@ const typeDefs = gql`
     description: String!
     image: String
     title: String!
+    price: Int
+    artist: String
+    writer: String
+  }
+
+  input OfferInput {
+    title: String!
+    description: String!
+    price: Int
+    userName: String
   }
 
   type Mutation {
     addProfile(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addComic(comic: ComicBookInput): User
-    deleteComic(title: String!): User
+    addComic(comic: ComicBookInput): Profile
+    deleteComic(title: String!): Profile
+    getOffers(offer: OfferInput): Offer
   }
 `;
 

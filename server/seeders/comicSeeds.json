@@ -2,29 +2,54 @@
     {
       "title": "",
       "publisher": "",
+      "author": "",
+      "artist": "",
+      "writer":"",
       "image": "",
-      "price": ""
+      "price": "",
+      "description": "",
+      "username": "",
+      "created": ""
+
 
     },
     {
-        "title": "",
-        "publisher": "",
-        "image": "",
-        "price": ""
-  
+      "title": "",
+      "publisher": "",
+      "author": "",
+      "artist": "",
+      "writer":"",
+      "image": "",
+      "price": "",
+      "description": "",
+      "username": "",
+      "created": ""
+
       },
       {
         "title": "",
-        "publisher": "",
-        "image": "",
-        "price": ""
-  
+      "publisher": "",
+      "author": "",
+      "artist": "",
+      "writer":"",
+      "image": "",
+      "price": "",
+      "description": "",
+      "username": "",
+      "created": ""
+
       },
       {
         "title": "",
-        "publisher": "",
-        "image": "",
-        "price": ""
-  
+      "publisher": "",
+      "author": "",
+      "artist": "",
+      "writer":"",
+      "image": "",
+      "price": "",
+      "description": "",
+      "username": "",
+      "created": ""
+
       }
 ]
