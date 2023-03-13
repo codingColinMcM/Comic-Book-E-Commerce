@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Brian Kernighan",
+    "email": "bkernighan@techfriends.dev",
+    "password": "password01",
+    "savedComics": []
+  },
+  {
+    "name": "Max Kanat-Alexander",
+    "email": "mkanatalexander@techfriends.dev",
+    "password": "password02",
+    "savedComics": []
+  },
+  {
+    "name": "Amiko",
+    "email": "amiko@techfriends.dev",
+    "password": "password03",
+    "savedComics": []
+  },
+  {
+    "name": "Kent Beck",
+    "email": "kbeck@techfriends.dev",
+    "password": "password04",
+    "savedComics": []
+    
+  },
+
+  {
+    "name": "Alan Kay",
+    "email": "akay@techfriends.dev",
+    "password": "password06",
+    "savedComics": []
+  },
+  {
+    "name": "C.A.R. Hoare",
+    "email": "choare@techfriends.dev",
+    "password": "password07",
+    "savedComics": []
+  },
+  {
+    "name": "David Thomas",
+    "email": "dthomas@techfriends.dev",
+    "password": "password08",
+    "savedComics": []
+  },
+  {
+    "name": "Donald Knuth",
+    "email": "dknuth@techfriends.dev",
+    "password": "password09",
+    "savedComics": []
+  },
+  {
+    "name": "Lernantino",
+    "email": "lernantino@techfriends.dev",
+    "password": "password10",
+    "savedComics": []
+  }
+]
