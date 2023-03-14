@@ -1,55 +1,55 @@
 [
     {
-      "title": " Spider-Verse",
-      "publisher": "Marvel",
-      "author": "",
-      "artist": "",
-      "writer":"Dan Slott",
+      "title": "JLA",
+      "publisher": "DC",
+      "author": "Grant Morrison",
+      "artist": "Howard Porter",
+      "writer":"Grant Morrison",
       "image": "",
-      "price": "",
-      "description": "",
-      "username": "",
-      "created": ""
+      "price": "10.00",
+      "description": "JLA relaunch #1",
+      "username": "steve55",
+      "created": "1997"
 
 
     },
     {
-      "title": "",
-      "publisher": "",
-      "author": "",
-      "artist": "",
-      "writer":"",
+      "title": "X-men",
+      "publisher": "Marvel",
+      "author": "Chris Claremont",
+      "artist": "Jim Lee",
+      "writer":"Chris Claremont",
       "image": "",
-      "price": "",
-      "description": "",
-      "username": "",
-      "created": ""
+      "price": "20.00",
+      "description": "X-men's most famous comic book run",
+      "username": "Jim2019",
+      "created": "1991"
 
       },
       {
-        "title": "",
-      "publisher": "",
-      "author": "",
-      "artist": "",
-      "writer":"",
+        "title": "Spider-Man",
+      "publisher": "Marvel",
+      "author": "Stan Lee",
+      "artist": "David Mandel",
+      "writer":"Stan Lee",
       "image": "",
-      "price": "",
-      "description": "",
-      "username": "",
-      "created": ""
+      "price": "148.85",
+      "description": "Spider-man #1",
+      "username": "Mandy2010",
+      "created": "1962"
 
       },
       {
-        "title": "",
-      "publisher": "",
-      "author": "",
-      "artist": "",
-      "writer":"",
+        "title": "Hulk",
+      "publisher": "Marvel",
+      "author": "Stan Lee",
+      "artist": "stan Lee",
+      "writer":"Stan Lee",
       "image": "",
-      "price": "",
-      "description": "",
-      "username": "",
-      "created": ""
+      "price": "14.95",
+      "description": "Hulk #1",
+      "username": "Banner2012",
+      "created": "1962"
 
       }
 ]
