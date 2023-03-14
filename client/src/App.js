@@ -15,9 +15,11 @@ import Login from './pages/Login';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
+let URI ="http://localhost:3001/graphql"
+
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: URI,
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
