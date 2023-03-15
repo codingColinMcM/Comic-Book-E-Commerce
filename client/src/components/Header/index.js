@@ -16,9 +16,6 @@ const Header = () => {
             Ecommerce Comicbooks: The Ultimate Comic Trading Platform
           </h1>
         </Link>
-        <p className="m-0" style={{ fontSize: '1.75rem', fontWeight: '700' }}>
-          Meet your new programming pals.
-        </p>
         <div>
           {Auth.loggedIn() ? (
             <button className="btn btn-lg btn-light m-2" onClick={logout}>

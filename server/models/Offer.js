@@ -13,6 +13,12 @@ const offerSchema = new Schema({
         type: { Types: ObjectId },
         ref: 'Profile', 
     },
+    
+    messages: { 
+        type: [Schema.Types.ObjectId],
+        ref: "Messages",
+        required: false,
+      }
 })
 
 const Offer = model('Offer', offerSchema);

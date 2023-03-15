@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { Profile } = require('../models');
+const { Profile, Offer, Comic } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -11,7 +11,25 @@ const resolvers = {
     profile: async (parent, { profileId }) => {
       return Profile.findOne({ _id: profileId });
     },
-  },
+
+     //get all offers
+    offer: async () => {
+      return Offer.find();
+    },
+    offer: async (parent, { offerId }) => {
+      return Offer.findOne({ _id: offerId });
+    },
+
+    //get all messages
+    message: async () => {
+      return Message.find();
+    },
+    message: async (parent, { messageId }) => {
+      return Message.findOne({ _id: messageId });
+    },
+
+  
+    },
 
   Mutation: {
     addProfile: async (parent, { name, email, password }) => {
@@ -37,6 +55,15 @@ const resolvers = {
       return { token, profile };
     },
 
+    addMessage: async (parent, { userID, message }) => {
+      return Offer.findOneAndUpdate(
+        { _id: offerId }, 
+        { $addToSet: { messages: message } }, 
+        { new: true, runValidators: true}
+        )
+    },
+
+    //add comic
     addComic: async (parent, { userId, comic }) => {
       return User.findOneAndUpdate(
         { _id: userId },
@@ -50,6 +77,20 @@ const resolvers = {
       );
     },
     
+    //add offer
+    addOffer: async (parent, { userId, offer }) => {
+      return Comic.findOneAndUpdate(
+        { _id: comicId },
+        {
+          $addToSet: { savedOffers: offers },
+        },
+        {
+          new: true,
+          runValidators: true,
+        }
+        )
+    },
+
     deleteComic: async (parent, { userId, comic }) => {
       return User.findOneAndUpdate(
         { _id: userId },
@@ -60,4 +101,5 @@ const resolvers = {
   },
 };
 
+   
 module.exports = resolvers;

@@ -64,6 +64,18 @@ const typeDefs = gql`
     deleteComic(title: String!): Profile
     getOffers(offer: OfferInput): Offer
   }
+
+  type Mutation {
+    addMessage(messageBody: String!, username: String!): Message:
+    deleteMessage(messageId: ID!): Message:
+  }
+
+  type Message {
+    messageId: ID
+    messageBody: String!
+    username: String!
+    createdAt: String!
+  }
 `;
 
 module.exports = typeDefs;
