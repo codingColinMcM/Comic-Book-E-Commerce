@@ -54,7 +54,7 @@ const typeDefs = gql`
     title: String!
     description: String!
     price: Int
-    userName: String
+    userName: String!
   }
 
   type Mutation {
@@ -63,12 +63,10 @@ const typeDefs = gql`
     addComic(comic: ComicBookInput): Profile
     deleteComic(title: String!): Profile
     getOffers(offer: OfferInput): Offer
+    addMessage(messageBody: String!, username: String!): Message
+    deleteMessage(messageId: ID!): Message
   }
 
-  type Mutation {
-    addMessage(messageBody: String!, username: String!): Message:
-    deleteMessage(messageId: ID!): Message:
-  }
 
   type Message {
     messageId: ID

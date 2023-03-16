@@ -55,12 +55,21 @@ const resolvers = {
       return { token, profile };
     },
 
-    addMessage: async (parent, { userID, message }) => {
+    addMessage: async (parent, { messageBody, username }) => {
       return Offer.findOneAndUpdate(
-        { _id: offerId }, 
+        { name: username }, 
         { $addToSet: { messages: message } }, 
         { new: true, runValidators: true}
         )
+    },
+
+    //delete message
+    deleteMessage: async (parent, { userId, message }) => {
+      return Offer.findOneAndUpdate(
+        { _id: offerId },
+        { $pull: { messages: message } },
+        { new: true }
+      );
     },
 
     //add comic
