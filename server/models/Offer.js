@@ -1,7 +1,9 @@
 const { Schema, model } = require('mongoose');
-const { Message, Profile } = require('./index');
+// const { Message, Profile } = require('./index');
+const Message = require('./Messages');
+const Profile = require('./Profile');
 
-const ObjectId = Schema.ObjectId;
+// const ObjectId = Schema.ObjectId;
 const bcrypt = require('bcrypt');
 
 const offerSchema = new Schema({
@@ -11,14 +13,14 @@ const offerSchema = new Schema({
         unique: true,
         trim: true,
     },
-    // userNameID: {
-    //     type: Schema.Types.ObjectId,
-    //     ref: Profile,
-    //     required: false,
-    // },
+    userNameID: {
+        type: Schema.Types.ObjectId,
+        ref: Profile,
+        required: false,
+    },
 
     messages: {
-        type: [Schema.Types.ObjectId],
+        type: [Schema.Types.ObjectID],
         ref: Message,
         required: false,
     },
