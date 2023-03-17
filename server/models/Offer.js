@@ -9,7 +9,7 @@ const offerSchema = new Schema({
         trim: true,
         },
     userName: {
-        type: Types.ObjectId, 
+        type: Schema.Types.ObjectId, 
         ref: 'Profile', 
     },
 })

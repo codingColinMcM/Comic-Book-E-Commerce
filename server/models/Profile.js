@@ -22,7 +22,10 @@ const profileSchema = new Schema({
     minlength: 5,
   },
 
-  savedComics: [Comic],
+  savedComics: [{
+    type: Schema.Types.ObjectId, 
+    ref: 'Comic'
+  }],
   
   
 });

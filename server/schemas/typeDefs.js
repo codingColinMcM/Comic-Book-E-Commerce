@@ -21,7 +21,7 @@ const typeDefs = gql`
     name: String
    title: String
    image: String
-   price: Int
+   price: int
    description: String
    userName: String
    createdAt: Date
