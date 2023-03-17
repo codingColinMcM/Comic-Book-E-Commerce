@@ -5,17 +5,42 @@ export const QUERY_PROFILES = gql`
     profiles {
       _id
       name
-      skills
+      email
+      savedComics {
+        _id
+        name
+        title
+        publisher
+        writer
+        artist
+        image
+        price
+        description
+        userName
+        createdAt
+      }
     }
   }
-`;
+  `;
 
 export const QUERY_SINGLE_PROFILE = gql`
-  query singleProfile($profileId: ID!) {
-    profile(profileId: $profileId) {
-      _id
-      name
-      skills
+    query profile($profileId: ID!) {
+        profile(profileId: $profileId) {
+            _id
+            name
+            savedComics {
+        _id
+        name
+        title
+        publisher
+        writer
+        artist
+        image
+        price
+        description
+        userName
+        createdAt
+            }
+        }
     }
-  }
 `;
