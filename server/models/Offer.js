@@ -1,5 +1,7 @@
 const { Schema, model } = require('mongoose');
-ObjectId = Schema.ObjectId;
+const { Message, Profile } = require('./index');
+
+const ObjectId = Schema.ObjectId;
 const bcrypt = require('bcrypt');
 
 const offerSchema = new Schema({
@@ -8,22 +10,27 @@ const offerSchema = new Schema({
         required: true,
         unique: true,
         trim: true,
-        },
-    userName: {
-        type: { Types: ObjectId },
-        ref: 'Profile', 
     },
-    
-    messages: { 
+    // userNameID: {
+    //     type: Schema.Types.ObjectId,
+    //     ref: Profile,
+    //     required: false,
+    // },
+
+    messages: {
         type: [Schema.Types.ObjectId],
-        ref: "Messages",
+        ref: Message,
         required: false,
-      },
-    
+    },
+
     offer: {
         type: String,
         required: false,
-    }
+    },
+    price: {
+        type: Number,
+        required: false,
+    },
 })
 
 const Offer = model('Offer', offerSchema);

@@ -5,7 +5,20 @@ export const QUERY_PROFILES = gql`
     profiles {
       _id
       name
-      skills
+      email
+      savedComics {
+        _id
+        name
+        title
+        publisher
+        writer
+        artist
+        image
+        price
+        description
+        userName
+        createdAt
+      }
     }
   }
   `;
@@ -15,6 +28,19 @@ export const QUERY_SINGLE_PROFILE = gql`
         profile(profileId: $profileId) {
             _id
             name
+            savedComics {
+        _id
+        name
+        title
+        publisher
+        writer
+        artist
+        image
+        price
+        description
+        userName
+        createdAt
+            }
         }
     }
-    
+`;

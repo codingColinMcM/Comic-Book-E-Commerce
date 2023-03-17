@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { Profile, Offer, Comic } = require('../models');
+const { Profile, Offer, Comic, Message } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -16,7 +16,7 @@ const resolvers = {
     offer: async () => {
       return Offer.find();
     },
-    offer: async (parent, { offerId }) => {
+    offers: async (parent, { offerId }) => {
       return Offer.findOne({ _id: offerId });
     },
 
@@ -24,7 +24,7 @@ const resolvers = {
     message: async () => {
       return Message.find();
     },
-    message: async (parent, { messageId }) => {
+    messages: async (parent, { messageId }) => {
       return Message.findOne({ _id: messageId });
     },
 
@@ -89,9 +89,9 @@ const resolvers = {
     //add offer
     addOffer: async (parent, { userId, offer }) => {
       return Comic.findOneAndUpdate(
-        { _id: comicId },
+        { _id: userId },
         {
-          $addToSet: { savedOffers: offers },
+          $addToSet: { savedOffers: offer },
         },
         {
           new: true,

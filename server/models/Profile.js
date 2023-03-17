@@ -24,7 +24,7 @@ const profileSchema = new Schema({
 
   savedComics: { 
     type: [Schema.Types.ObjectId],
-    ref: "Comic",
+    ref: Comic,
     required: false,
   }
   

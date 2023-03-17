@@ -9,13 +9,22 @@ const typeDefs = gql`
     savedComics: [Comic]
   }
 
-  type Offer {
-    title: String!
-    description: String!
-    price: Int
-    userName: String
+  type Message {
+    messageId: ID
+    messageBody: String!
+    username: String!
+    createdAt: String!
   }
 
+ 
+  type Offer {
+    _id: ID
+    textbody: String!
+    userNameId: Profile
+    messages: [Message]
+    offer: String
+    price: Int
+  }
   type Comic {
     _id: ID
     name: String
@@ -35,9 +44,15 @@ const typeDefs = gql`
     profile: Profile
   }
 
+ 
+
   type Query {
     profiles: [Profile]!
     profile(profileId: ID!): Profile
+    offer: [Offer]!
+    offers(offerId: ID!): Offer
+    message: [Message]!
+    messages(messageId: ID!): Message
   }
 
   input ComicBookInput {
@@ -51,8 +66,8 @@ const typeDefs = gql`
   }
 
   input OfferInput {
-    title: String!
-    description: String!
+    textbody: String!
+    offer: String!
     price: Int
     userName: String!
   }
@@ -65,14 +80,7 @@ const typeDefs = gql`
     getOffers(offer: OfferInput): Offer
     addMessage(messageBody: String!, username: String!): Message
     deleteMessage(messageId: ID!): Message
-  }
-
-
-  type Message {
-    messageId: ID
-    messageBody: String!
-    username: String!
-    createdAt: String!
+    addOffer(name: String!, email: String!): Offer
   }
 `;
 

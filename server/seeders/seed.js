@@ -9,11 +9,33 @@ db.once('open', async () => {
     await Profile.create(profileSeeds);
 
     await Comic.deleteMany({});
-    await Comic.create(comicSeeds)
+    await Comic.create(comicSeeds);
 
-    console.log('all done!');
+    const hulk = await Comic.findOne({ title: 'Hulk' });
+    console.log("hulk", hulk);
+
+    const spiderMan =await Comic.findOne({ title:"Spider-Man" })
+    console.log("spiderMan", spiderMan);
+
+    const xMen = await Comic.findOne({ title:"X-men" })
+
+    //added one comic to the profile
+    await Profile.findOneAndUpdate(
+      { name: 'Alan Kay' },
+      { $push: { savedComics: xMen._id } }
+    );
+
+    //added two comics to the profile
+    await Profile.findOneAndUpdate(
+      { name: "Amiko" },
+      { $push: { savedComics: {$each :[hulk._id, spiderMan._id]} }}
+    );
+
+    console.log("all done!")
     process.exit(0);
   } catch (err) {
     throw err;
   }
+
+  
 });
