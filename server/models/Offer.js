@@ -13,12 +13,12 @@ const offerSchema = new Schema({
     },
     userNameID: {
         type: Schema.Types.ObjectID,
-        ref: Profile,
+        ref: "Profile",
         required: false,
     },
     messages: {
         type: [Schema.Types.ObjectID],
-        ref: Message,
+        ref: "Message",
         required: false,
     },
 
@@ -28,6 +28,6 @@ const offerSchema = new Schema({
     },
 })
 
-// const Offer = model('Offer', offerSchema);
+ const Offer = model('Offer', offerSchema);
 
 module.exports = Offer;

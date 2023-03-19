@@ -37,6 +37,12 @@ db.once('open', async () => {
       { $push: { savedComics: {$each :[hulk._id, spiderMan._id]} }}
     );
 
+    //add offer to the profile
+    await Profile.findOneAndUpdate(
+      { name: "Brian Kernighan" },
+      { $push: { savedOffers: Offer._id } }
+    );
+
     console.log("all done!")
     process.exit(0);
   } catch (err) {
