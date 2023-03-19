@@ -49,3 +49,4 @@ profileSchema.methods.isCorrectPassword = async function (password) {
 const Profile = model('Profile', profileSchema);
 
 module.exports = Profile;
+""

@@ -5,27 +5,27 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     profiles: async () => {
-      return Profile.find();
+      return await Profile.find();
     },
 
     profile: async (parent, { profileId }) => {
-      return Profile.findOne({ _id: profileId });
+      return await Profile.findOne({ _id: profileId });
     },
 
      //get all offers
     offer: async () => {
-      return Offer.find();
+      return await Offer.find();
     },
     offers: async (parent, { offerId }) => {
-      return Offer.findOne({ _id: offerId });
+      return await Offer.findOne({ _id: offerId });
     },
 
     //get all messages
     message: async () => {
-      return Message.find();
+      return await Message.find();
     },
     messages: async (parent, { messageId }) => {
-      return Message.findOne({ _id: messageId });
+      return await Message.findOne({ _id: messageId });
     },
 
   
@@ -56,7 +56,7 @@ const resolvers = {
     },
 
     addMessage: async (parent, { messageBody, username }) => {
-      return Offer.findOneAndUpdate(
+      return await Offer.findOneAndUpdate(
         { name: username }, 
         { $addToSet: { messages: message } }, 
         { new: true, runValidators: true}
@@ -65,7 +65,7 @@ const resolvers = {
 
     //delete message
     deleteMessage: async (parent, { userId, message }) => {
-      return Offer.findOneAndUpdate(
+      return await Offer.findOneAndUpdate(
         { _id: offerId },
         { $pull: { messages: message } },
         { new: true }
@@ -74,7 +74,7 @@ const resolvers = {
 
     //add comic
     addComic: async (parent, { userId, comic }) => {
-      return User.findOneAndUpdate(
+      return await User.findOneAndUpdate(
         { _id: userId },
         {
           $addToSet: { savedComics: comic },
@@ -88,7 +88,7 @@ const resolvers = {
     
     //add offer
     addOffer: async (parent, { userId, offer }) => {
-      return Comic.findOneAndUpdate(
+       return await Comic.findOneAndUpdate(
         { _id: userId },
         {
           $addToSet: { savedOffers: offer },
@@ -101,7 +101,7 @@ const resolvers = {
     },
 
     deleteComic: async (parent, { userId, comic }) => {
-      return User.findOneAndUpdate(
+      return await User.findOneAndUpdate(
         { _id: userId },
         { $pull: { savedComics: comic } },
         { new: true }

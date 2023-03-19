@@ -76,12 +76,13 @@ const typeDefs = gql`
     addProfile(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addComic(comic: ComicBookInput): Profile
-    deleteComic(title: String!): Profile
-    getOffers(offer: OfferInput): Offer
+    addOffer(textbody: String!, userNameID: ID, offer: String, price: Float): Offer!
+    deleteComic(title: String!): Profile 
     addMessage(messageBody: String!, username: String!): Message
     deleteMessage(messageId: ID!): Message
-    addOffer(name: String!, email: String!): Offer
   }
 `;
 
 module.exports = typeDefs;
+
+//getOffers(offer: OfferInput): Offer

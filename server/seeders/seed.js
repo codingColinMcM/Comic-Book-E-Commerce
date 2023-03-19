@@ -1,5 +1,5 @@
 const db = require('../config/connection');
-const { Profile, Comic } = require('../models');
+const { Profile, Comic } = require('../../client/models');
 const profileSeeds = require('./profileSeeds.json');
 const comicSeeds = require('./comicSeeds.json');
 
