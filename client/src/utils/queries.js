@@ -49,7 +49,7 @@ export const QUERY_OFFER = gql`
   query allOFFER {
     offer {
       textbody
-      userNameId
+      userNameID
       messages
       offer
       price

@@ -7,6 +7,8 @@ const typeDefs = gql`
     email: String
     password: String
     savedComics: [Comic]
+    messages: [Message]
+    offer: [Offer]
   }
 
   type Message {
@@ -20,7 +22,7 @@ const typeDefs = gql`
   type Offer {
     _id: ID
     textbody: String!
-    userNameId: Profile
+    userNameID: Profile
     messages: [Message]
     offer: String
     price: Int

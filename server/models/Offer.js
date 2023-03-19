@@ -12,27 +12,22 @@ const offerSchema = new Schema({
         required: true,
     },
     userNameID: {
-        type: Schema.Types.ObjectId,
+        type: Schema.Types.ObjectID,
         ref: Profile,
         required: false,
     },
-
     messages: {
         type: [Schema.Types.ObjectID],
         ref: Message,
         required: false,
     },
 
-    offer: {
-        type: String,
-        required: false,
-    },
     price: {
         type: Number,
         required: false,
     },
 })
 
-const Offer = model('Offer', offerSchema);
+// const Offer = model('Offer', offerSchema);
 
 module.exports = Offer;
