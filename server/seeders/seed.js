@@ -1,7 +1,10 @@
 const db = require('../config/connection');
-const { Profile, Comic } = require('../../client/models');
+const { Profile, Comic } = require('../models');
 const profileSeeds = require('./profileSeeds.json');
 const comicSeeds = require('./comicSeeds.json');
+const { Offer } = require('../models');
+const offerSeeds = require('./offerSeeds.json');
+
 
 db.once('open', async () => {
   try {
@@ -10,6 +13,9 @@ db.once('open', async () => {
 
     await Comic.deleteMany({});
     await Comic.create(comicSeeds);
+
+    await Offer.deleteMany({});
+    await Offer.create(offerSeeds);
 
     const hulk = await Comic.findOne({ title: 'Hulk' });
     console.log("hulk", hulk);

@@ -1,0 +1,29 @@
+[
+    {
+        "textbody": "X-men #53 for sale $20.00",
+
+        "messages": [],
+        "offer": "bidding starts @ $20.00",
+        "price": 20.00
+    },
+    {
+        "textbody": "JLA #25 for sale $15.00",
+        "messages": [],
+        "offer": "bidding starts @ $15.00",
+        "price": 15.00
+    },
+    {
+        "textbody": "Hulk #1 for sale $70.00",
+        "messages": [],
+        "offer": "bidding starts @ $70.00",
+        "price": 70.00
+    },
+    {
+        "textbody": "X-Men #1 for sale $100.00",
+        "messages": [],
+        "offer": "bidding starts @ $100.00",
+        "price": 100.00
+    }
+    
+    
+]

@@ -10,8 +10,6 @@ const offerSchema = new Schema({
     textbody: {
         type: String,
         required: true,
-        unique: true,
-        trim: true,
     },
     userNameID: {
         type: Schema.Types.ObjectId,
