@@ -2,24 +2,24 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
-import { ADD_SKILL } from '../../utils/mutations';
+import { ADD_Offer } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
 
 const SkillForm = ({ profileId }) => {
-  const [skill, setSkill] = useState('');
+  const [Offer, setOffer] = useState('');
 
-  const [addSkill, { error }] = useMutation(ADD_SKILL);
+  const [addOffer, { error }] = useMutation(ADD_Offer);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      const data = await addSkill({
-        variables: { profileId, skill },
+      const data = await addOffer({
+        variables: { profileId, Offer },
       });
 
-      setSkill('');
+      setOffer('');
     } catch (err) {
       console.error(err);
     }
@@ -27,7 +27,7 @@ const SkillForm = ({ profileId }) => {
 
   return (
     <div>
-      <h4>Endorse some more skills below.</h4>
+      <h4> Comment on these offers</h4>
 
       {Auth.loggedIn() ? (
         <form
@@ -37,9 +37,9 @@ const SkillForm = ({ profileId }) => {
           <div className="col-12 col-lg-9">
             <input
               placeholder="Endorse some skills..."
-              value={skill}
+              value={Offer}
               className="form-input w-100"
-              onChange={(event) => setSkill(event.target.value)}
+              onChange={(event) => setOffer(event.target.value)}
             />
           </div>
 
