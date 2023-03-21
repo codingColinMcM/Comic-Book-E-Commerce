@@ -51,7 +51,6 @@ export const QUERY_OFFER = gql`
       textbody
       userNameID
       messages
-      offer
       price
     }
   }

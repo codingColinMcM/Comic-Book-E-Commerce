@@ -13,12 +13,11 @@ export const ADD_PROFILE = gql`
 `;
 
 export const ADD_Offer = gql`
-  mutation addOffer($profileId: ID!, $Offer: String!) {
+  mutation addOffer($textbody:String, $userNameId:ID,$messages:ID,$price:Float) {
     addOffer(profileId: $profileId, offer: $Offer) {
-      _id
-      name
-      savedOffers {
-    }
+  
+      textbody
+      price
   }
 }
 `;

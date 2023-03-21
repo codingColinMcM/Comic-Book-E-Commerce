@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { Profile, Offer, Comic, Message } = require('../models');
+const { Profile, Comic, Message, Offer } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -12,7 +12,7 @@ const resolvers = {
       return await Profile.findOne({ _id: profileId });
     },
 
-     //get all offers
+    //get all offers
     offer: async () => {
       return await Offer.find();
     },
@@ -28,8 +28,8 @@ const resolvers = {
       return await Message.findOne({ _id: messageId });
     },
 
-  
-    },
+
+  },
 
   Mutation: {
     addProfile: async (parent, { name, email, password }) => {
@@ -57,10 +57,10 @@ const resolvers = {
 
     addMessage: async (parent, { messageBody, username }) => {
       return await Offer.findOneAndUpdate(
-        { name: username }, 
-        { $addToSet: { messages: message } }, 
-        { new: true, runValidators: true}
-        )
+        { name: username },
+        { $addToSet: { messages: message } },
+        { new: true, runValidators: true }
+      )
     },
 
     //delete message
@@ -85,11 +85,12 @@ const resolvers = {
         }
       );
     },
-    
+
     //add offer
-    addOffer: async (parent, { userId, offer }) => {
-       return await Comic.findOneAndUpdate(
-        { _id: userId },
+    addOffer: async (parent, { textbody, userNameId, messages, price }) => {
+      const Offer = await Offer.create(
+
+        { _id: userNameId },
         {
           $addToSet: { savedOffers: offer },
         },
@@ -97,18 +98,16 @@ const resolvers = {
           new: true,
           runValidators: true,
         }
-        )
+      )
     },
 
-    deleteComic: async (parent, { userId, comic }) => {
-      return await User.findOneAndUpdate(
-        { _id: userId },
-        { $pull: { savedComics: comic } },
-        { new: true }
+    deleteComic: async (parent, { title }) => {
+      const deleted = await Comic.deleteOne(
+        { title: title }
       );
+      return true
     },
-  },
-};
+  }
+}
 
-   
 module.exports = resolvers;

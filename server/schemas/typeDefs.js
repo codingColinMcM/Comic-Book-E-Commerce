@@ -79,7 +79,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addComic(comic: ComicBookInput): Profile
     addOffer(textbody: String!, userNameID: ID, offer: String, price: Float): Offer!
-    deleteComic(title: String!): Profile 
+    deleteComic(title: String!): Boolean 
     addMessage(messageBody: String!, username: String!): Message
     deleteMessage(messageId: ID!): Message
   }
