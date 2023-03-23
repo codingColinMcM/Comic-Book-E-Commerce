@@ -23,7 +23,7 @@ const Profile = () => {
   return (
     <div>
       <h2 className="card-header">
-        {profile.name}'s friends have endorsed these skills...
+        {profile.name} bid on these offers
       </h2>
 
       {profile.skills?.length > 0 && <OfferList offers={profile.skills} />}
